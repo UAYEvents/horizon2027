@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Horizon 2027 · UAY Events</title>
+  <link rel="stylesheet" href="css/styles.css">
+
+  <style>
+    .landing {
+      height: 100vh;
+      min-height: 600px;
+      background: var(--alabaster);
+      display: flex;
+      align-items: center;
+      padding: 35px 0;
+      overflow: hidden;
+    }
+
+    .landing__inner {
+      width: min(calc(100% - (var(--pad) * 2)), var(--max));
+      height: 100%;
+      margin: auto;
+      display: flex;
+      flex-direction: column;
+    }
+
+    /* PARTE SUPERIOR */
+
+    .landing__top {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      gap: 30px;
+    }
+
+    .landing__brand {
+      font-family: "Amaranth", sans-serif;
+      font-size: 1.6rem;
+      font-weight: 700;
+    }
+
+    .landing__brand span {
+      color: var(--orange);
+    }
+
+    .landing__meta {
+      font-size: .75rem;
+      text-transform: uppercase;
+      letter-spacing: .16em;
+      font-weight: 700;
+    }
+
+    /* CONTENIDO CENTRAL */
+
+    .landing__content {
+      margin-top: auto;
+      margin-bottom: 45px;
+      max-width: 1100px;
+    }
+
+    .landing__hello {
+      font-family: "Amaranth", sans-serif;
+      font-size: clamp(3rem, 6vw, 6.5rem);
+      line-height: .95;
+      margin: 0 0 30px;
+      letter-spacing: -.03em;
+    }
+
+    .landing__hello span {
+      color: var(--orange);
+    }
+
+    .landing__intro {
+      font-size: clamp(1.05rem, 1.5vw, 1.4rem);
+      max-width: 780px;
+      margin: 0;
+      line-height: 1.5;
+    }
+
+    .landing__intro strong {
+      font-weight: 600;
+    }
+
+    /* PARTE INFERIOR */
+
+    .landing__bottom {
+      display: grid;
+      grid-template-columns: 1fr auto;
+      gap: 40px;
+      align-items: center;
+      padding-top: 24px;
+      padding-bottom: 5px;
+      border-top: 1px solid rgba(25,25,25,.18);
+    }
+
+    .landing__question {
+      font-family: "Amaranth", sans-serif;
+      font-size: clamp(1.7rem, 3vw, 3.2rem);
+      line-height: 1;
+      margin: 0;
+      max-width: 760px;
+    }
+
+    .landing__question span {
+      color: var(--orange);
+    }
+
+    /* RESPONSIVE */
+
+    @media (max-width: 800px) {
+
+      .landing {
+        height: auto;
+        min-height: 100vh;
+        padding: 25px 0;
+        overflow: visible;
+      }
+
+      .landing__inner {
+        min-height: calc(100vh - 50px);
+      }
+
+      .landing__top {
+        flex-direction: column;
+        gap: 6px;
+      }
+
+      .landing__content {
+        margin-top: auto;
+        margin-bottom: 35px;
+        padding-top: 45px;
+      }
+
+      .landing__hello {
+        margin-bottom: 24px;
+      }
+
+      .landing__bottom {
+        grid-template-columns: 1fr;
+        gap: 22px;
+        align-items: flex-start;
+        padding-top: 22px;
+      }
+
+      .landing__bottom .btn {
+        width: 100%;
+      }
+    }
+
+    /* PANTALLAS DE PORTÁTIL CON POCA ALTURA */
+
+    @media (max-height: 750px) and (min-width: 801px) {
+
+      .landing {
+        padding: 25px 0;
+      }
+
+      .landing__content {
+        margin-bottom: 30px;
+      }
+
+      .landing__hello {
+        font-size: clamp(3rem, 5.5vw, 5.5rem);
+        margin-bottom: 22px;
+      }
+
+      .landing__intro {
+        font-size: 1.05rem;
+        line-height: 1.4;
+      }
+
+      .landing__bottom {
+        padding-top: 20px;
+      }
+
+      .landing__question {
+        font-size: clamp(1.7rem, 2.7vw, 2.8rem);
+      }
+    }
+
+  </style>
+</head>
+
+<body>
+
+  <main class="landing">
+
+    <div class="landing__inner">
+
+      <!-- CABECERA -->
+
+      <div class="landing__top">
+
+        <div class="landing__brand">
+          UAY<span>.</span> EVENTS
+        </div>
+
+        <div class="landing__meta">
+          Horizon 2027 · Creative Proposal
+        </div>
+
+      </div>
+
+
+      <!-- MENSAJE PRINCIPAL -->
+
+      <div class="landing__content">
+
+        <h1 class="landing__hello">
+          ¡Hola!<br>
+          Somos UAY<span>.</span> Events
+        </h1>
+
+        <p class="landing__intro">
+          Nos gusta mirar un poco más allá de lo evidente, imaginar lo que todavía no existe
+          y convertir ideas en experiencias que se recuerdan.
+        </p>
+
+      </div>
+
+
+      <!-- CTA -->
+
+      <div class="landing__bottom">
+
+        <p class="landing__question">
+          READY TO LOOK<br>
+          <span>BEYOND THE HORIZON?</span>
+        </p>
+
+        <a class="btn btn--orange" href="home.html">
+          Empezamos →
+        </a>
+
+      </div>
+
+    </div>
+
+  </main>
+
+</body>
+</html>
