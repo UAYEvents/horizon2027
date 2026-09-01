@@ -427,7 +427,7 @@ CONCEPTO
   display:flex;
   flex-wrap:wrap;
   gap:12px;
-  margin:50px 0;
+  margin:0px 0;
 }
 
 .concept-statement span{
@@ -1419,6 +1419,112 @@ TEAM
   outline:2px solid var(--orange);
   outline-offset:6px;
   border-radius:18px;
+}
+
+
+.download-grid{
+  display:grid;
+  grid-template-columns:repeat(3, 1fr);
+  gap:20px;
+}
+
+
+/* CARD */
+
+.download-card{
+  background:#fff;
+  border:1px solid rgba(0,0,0,.12);
+  padding:24px;
+  cursor:pointer;
+  transition:
+    transform .25s ease,
+    border-color .25s ease,
+    background .25s ease;
+}
+
+
+/* CABECERA */
+
+.download-card summary{
+  list-style:none;
+  cursor:pointer;
+}
+
+
+/* elimina la flecha automática del navegador */
+
+.download-card summary::-webkit-details-marker{
+  display:none;
+}
+
+
+.download-card summary h3{
+  margin:0;
+  font-size:1.15rem;
+  font-weight:700;
+}
+
+
+/* HOVER */
+
+.download-card:hover{
+  transform:translateY(-3px);
+  border-color:var(--orange);
+}
+
+
+/* CONTENIDO DESPLEGABLE */
+
+.download-card__content{
+  padding-top:18px;
+  margin-top:18px;
+  border-top:1px solid rgba(0,0,0,.12);
+}
+
+
+.download-card__content p{
+  margin:0;
+  line-height:1.65;
+  font-size:.95rem;
+}
+
+
+/* CARD ABIERTA */
+
+.download-card[open]{
+  border-color:var(--orange);
+}
+
+.download-card summary{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  gap:20px;
+}
+
+
+.download-card summary::after{
+  content:"+";
+  font-size:1.5rem;
+  font-weight:300;
+  line-height:1;
+  transition:transform .25s ease;
+}
+
+
+.download-card[open] summary::after{
+  content:"−";
+}
+
+
+/* MOBILE */
+
+@media (max-width:768px){
+
+  .download-grid{
+    grid-template-columns:1fr;
+  }
+
 }
 
 
