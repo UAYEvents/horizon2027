@@ -362,6 +362,527 @@ button{font:inherit}
   transform:none;
 }
 
+/* ==================================================
+HORIZON 2027
+================================================== */
+
+
+/* ------------------------------
+CONCEPTO
+------------------------------ */
+
+.concept-intro{
+  margin-bottom:38px;
+}
+
+.concept-copy{
+  max-width:900px;
+  font-size:1rem;
+  line-height:1.8;
+  margin-bottom:45px;
+}
+
+.concept-copy p{
+  margin:0 0 20px;
+}
+
+.concept-statement{
+  display:flex;
+  flex-wrap:wrap;
+  gap:12px;
+  margin:50px 0;
+}
+
+.concept-statement span{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  background:var(--black);
+  color:var(--white);
+  padding:14px 22px;
+  border-radius:999px;
+  font-size:.8rem;
+  font-weight:700;
+  letter-spacing:.14em;
+}
+
+.concept-statement span:nth-child(2){
+  background:var(--orange);
+  color:var(--black);
+}
+
+
+/* ------------------------------
+DECORACIÓN
+------------------------------ */
+
+.venue-section{
+  padding:60px 0;
+  border-top:1px solid rgba(25,25,25,.15);
+}
+
+.venue-section:first-of-type{
+  margin-top:60px;
+}
+
+.venue-heading{
+  display:flex;
+  align-items:flex-start;
+  gap:22px;
+  margin-bottom:25px;
+}
+
+.venue-heading__number{
+  font-family:"Amaranth",sans-serif;
+  font-size:1.2rem;
+  color:var(--orange);
+}
+
+.spacer-small{
+  height:55px;
+}
+
+
+/* ------------------------------
+FEATURE CARDS / SEÑALÉTICA
+------------------------------ */
+
+.feature-grid{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:18px;
+  margin:50px 0;
+}
+
+.feature-card{
+  padding:24px 10px 20px 0;
+}
+
+.feature-card span{
+  display:block;
+  color:var(--orange);
+  font-size:.76rem;
+  font-weight:700;
+  letter-spacing:.14em;
+  margin-bottom:45px;
+}
+
+.feature-card h3{
+  font-family:"Amaranth",sans-serif;
+  font-size:1.6rem;
+  margin:0 0 12px;
+}
+
+.feature-card p{
+  margin:0;
+  font-size:.9rem;
+}
+
+
+/* ==================================================
+AGENDA
+================================================== */
+
+.agenda-section{
+  overflow:hidden;
+}
+
+.agenda-header{
+  display:flex;
+  justify-content:space-between;
+  align-items:flex-end;
+  gap:40px;
+  margin-bottom:80px;
+}
+
+.agenda-date{
+  display:flex;
+  flex-direction:column;
+  align-items:flex-end;
+  text-align:right;
+  padding-bottom:10px;
+}
+
+.agenda-date span{
+  text-transform:uppercase;
+  letter-spacing:.16em;
+  font-size:.75rem;
+  opacity:.65;
+}
+
+.agenda-date strong{
+  font-family:"Amaranth",sans-serif;
+  font-size:clamp(1.8rem,3vw,3rem);
+}
+
+
+.timeline{
+  position:relative;
+  max-width:1050px;
+  margin-left:auto;
+}
+
+.timeline:before{
+  content:"";
+  position:absolute;
+  left:145px;
+  top:0;
+  bottom:0;
+  width:1px;
+  background:rgba(255,255,255,.22);
+}
+
+.timeline-item{
+  display:grid;
+  grid-template-columns:110px 70px 1fr;
+  min-height:170px;
+}
+
+.timeline-time{
+  font-family:"Amaranth",sans-serif;
+  font-size:1.6rem;
+  padding-top:7px;
+}
+
+.timeline-dot{
+  position:relative;
+}
+
+.timeline-dot:before{
+  content:"";
+  position:absolute;
+  top:18px;
+  left:30px;
+  width:10px;
+  height:10px;
+  border-radius:50%;
+  background:var(--orange);
+  box-shadow:0 0 0 7px var(--black);
+}
+
+.timeline-content{
+  padding:0 0 52px 5px;
+  max-width:680px;
+}
+
+.timeline-label{
+  display:block;
+  color:var(--orange);
+  text-transform:uppercase;
+  font-size:.72rem;
+  letter-spacing:.16em;
+  font-weight:700;
+  margin-bottom:5px;
+}
+
+.timeline-content h3{
+  font-family:"Amaranth",sans-serif;
+  font-size:clamp(1.6rem,2.5vw,2.4rem);
+  margin:0 0 8px;
+}
+
+.timeline-content p{
+  margin:0;
+  opacity:.7;
+}
+
+
+/* ==================================================
+HOSPITALITY / WELCOME KIT
+================================================== */
+
+.split--top{
+  align-items:start;
+  margin-top:55px;
+}
+
+.welcome-kit{
+  margin-top:100px;
+  padding-top:70px;
+  border-top:1px solid rgba(25,25,25,.16);
+}
+
+.welcome-kit__intro{
+  max-width:700px;
+  margin-bottom:45px;
+}
+
+.kit-grid{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:18px;
+  margin-bottom:45px;
+}
+
+.kit-card{
+  min-height:250px;
+  padding:24px;
+  border:1px solid rgba(25,25,25,.15);
+  border-radius:22px;
+  display:flex;
+  flex-direction:column;
+}
+
+.kit-number{
+  color:var(--orange);
+  font-size:.75rem;
+  letter-spacing:.15em;
+  font-weight:700;
+  margin-bottom:auto;
+}
+
+.kit-card h4{
+  font-family:"Amaranth",sans-serif;
+  font-size:1.45rem;
+  margin:45px 0 8px;
+}
+
+.kit-card p{
+  font-size:.87rem;
+  margin:0;
+}
+
+
+/* ==================================================
+DINNER SCENARIOS
+================================================== */
+
+.dinner-scenario{
+  margin-top:100px;
+  padding-top:60px;
+  border-top:2px solid var(--black);
+}
+
+.scenario-header{
+  display:grid;
+  grid-template-columns:1fr .8fr;
+  gap:50px;
+  align-items:end;
+  margin-bottom:50px;
+}
+
+.scenario-header > p{
+  max-width:500px;
+}
+
+.scenario-number{
+  display:block;
+  font-family:"Amaranth",sans-serif;
+  font-size:5rem;
+  line-height:1;
+  color:var(--orange);
+  margin-bottom:20px;
+}
+
+
+.venue-card{
+  margin:30px 0 65px;
+}
+
+.venue-card__copy{
+  max-width:720px;
+  margin-bottom:28px;
+}
+
+.venue-card__copy p:last-child{
+  max-width:700px;
+}
+
+
+.photo-grid{
+  display:grid;
+  grid-template-columns:repeat(2,1fr);
+  grid-template-rows:repeat(2,280px);
+  gap:12px;
+}
+
+.photo-grid img{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  border-radius:18px;
+}
+
+
+.unavailable-box{
+  background:var(--black);
+  color:var(--white);
+  border-radius:24px;
+  padding:35px;
+  margin-top:40px;
+}
+
+.unavailable-box h4{
+  font-family:"Amaranth",sans-serif;
+  font-size:1.8rem;
+  margin:5px 0 25px;
+}
+
+.unavailable-tags{
+  display:flex;
+  flex-wrap:wrap;
+  gap:10px;
+}
+
+.unavailable-tags span{
+  border:1px solid rgba(255,255,255,.35);
+  border-radius:999px;
+  padding:9px 15px;
+  font-size:.75rem;
+}
+
+
+.dinner-scenario--wow{
+  position:relative;
+}
+
+.dinner-scenario--wow .venue-card{
+  background:var(--black);
+  color:var(--white);
+  border-radius:28px;
+  padding:35px;
+}
+
+
+/* ==================================================
+DOWNLOADS
+================================================== */
+
+.download-grid{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:18px;
+  margin-top:60px;
+}
+
+.download-card{
+  min-height:260px;
+  border:1px solid rgba(25,25,25,.16);
+  border-radius:24px;
+  padding:25px;
+  display:flex;
+  flex-direction:column;
+  justify-content:space-between;
+  transition:.3s ease;
+}
+
+.download-card:hover{
+  background:var(--orange);
+  border-color:var(--orange);
+  transform:translateY(-5px);
+}
+
+.download-icon{
+  align-self:flex-end;
+  font-size:1.8rem;
+}
+
+.download-card small{
+  display:block;
+  text-transform:uppercase;
+  letter-spacing:.14em;
+  font-size:.65rem;
+  margin-bottom:8px;
+}
+
+.download-card h3{
+  font-family:"Amaranth",sans-serif;
+  font-size:1.8rem;
+  margin:0;
+}
+
+
+/* ==================================================
+SOSTENIBILIDAD
+================================================== */
+
+.sustainability-grid{
+  display:grid;
+  grid-template-columns:repeat(2,1fr);
+  gap:0;
+  margin-top:60px;
+}
+
+.sustainability-card{
+  min-height:280px;
+  padding:30px;
+  border-top:1px solid rgba(25,25,25,.18);
+}
+
+.sustainability-card:nth-child(odd){
+  border-right:1px solid rgba(25,25,25,.18);
+}
+
+.sustainability-card span{
+  display:block;
+  color:var(--orange);
+  font-size:.72rem;
+  letter-spacing:.15em;
+  font-weight:700;
+  margin-bottom:60px;
+}
+
+.sustainability-card h3{
+  font-family:"Amaranth",sans-serif;
+  font-size:1.65rem;
+  margin:0 0 12px;
+}
+
+.sustainability-card p{
+  margin:0;
+  font-size:.9rem;
+}
+
+
+/* ==================================================
+CONTINGENCIA
+================================================== */
+
+.contingency-list{
+  margin-top:60px;
+}
+
+.contingency-item{
+  display:grid;
+  grid-template-columns:80px 1fr;
+  gap:20px;
+  border-top:1px solid rgba(25,25,25,.16);
+  padding:28px 0;
+}
+
+.contingency-item > span{
+  color:var(--orange);
+  font-size:.75rem;
+  font-weight:700;
+  letter-spacing:.15em;
+}
+
+.contingency-item h3{
+  font-family:"Amaranth",sans-serif;
+  font-size:1.6rem;
+  margin:0 0 8px;
+}
+
+.contingency-item p{
+  margin:0;
+  max-width:750px;
+}
+
+
+.contingency-quote{
+  margin-top:70px;
+  padding:60px;
+  background:var(--orange);
+  border-radius:var(--radius);
+}
+
+.contingency-quote p{
+  font-family:"Amaranth",sans-serif;
+  font-size:clamp(2rem,5vw,4.5rem);
+  line-height:1;
+  margin:0;
+}
+
 @media (max-width:900px){
   .nav__toggle{display:block}
   .nav__links{
