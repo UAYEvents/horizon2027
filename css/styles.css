@@ -1244,6 +1244,186 @@ ALOJAMIENTO
   opacity:.7;
 }
 
+/* ==================================================
+TEAM
+================================================== */
+
+.team-grid{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:22px;
+  align-items:start;
+}
+
+.team-card{
+  border-top:1px solid rgba(25,25,25,.2);
+  padding-top:20px;
+}
+
+.team-card__summary{
+  list-style:none;
+  cursor:pointer;
+}
+
+.team-card__summary::-webkit-details-marker{
+  display:none;
+}
+
+.team-card__summary::marker{
+  display:none;
+  content:"";
+}
+
+.team-card .media-placeholder{
+  min-height:360px;
+  border-radius:18px;
+  position:relative;
+  cursor:pointer;
+}
+
+.team-card .media-placeholder::after{
+  content:"";
+  position:absolute;
+  inset:0;
+  background:linear-gradient(
+    to top,
+    rgba(25,25,25,.55),
+    rgba(25,25,25,0) 45%
+  );
+  opacity:0;
+  transition:.3s ease;
+}
+
+.team-card:hover .media-placeholder::after,
+.team-card[open] .media-placeholder::after{
+  opacity:1;
+}
+
+.team-card .media-placeholder img{
+  transition:transform .45s ease;
+}
+
+.team-card:hover .media-placeholder img{
+  transform:scale(1.035);
+}
+
+
+/* Texto sobre imagen */
+
+.team-card__hint{
+  position:absolute;
+  left:20px;
+  bottom:18px;
+  z-index:2;
+
+  color:var(--white);
+  font-size:.7rem;
+  font-weight:700;
+  letter-spacing:.12em;
+  text-transform:uppercase;
+
+  opacity:0;
+  transform:translateY(8px);
+  transition:.3s ease;
+}
+
+.team-card:hover .team-card__hint,
+.team-card[open] .team-card__hint{
+  opacity:1;
+  transform:none;
+}
+
+
+/* Nombre + cargo */
+
+.team-card__heading{
+  display:flex;
+  justify-content:space-between;
+  align-items:flex-start;
+  gap:20px;
+}
+
+.team-card h3{
+  margin:18px 0 2px;
+  font-family:"Amaranth",sans-serif;
+}
+
+.team-card__heading p{
+  margin:0;
+}
+
+
+/* Icono + */
+
+.team-card__icon{
+  flex:0 0 auto;
+
+  width:34px;
+  height:34px;
+  margin-top:17px;
+
+  display:flex;
+  align-items:center;
+  justify-content:center;
+
+  border:1px solid rgba(25,25,25,.25);
+  border-radius:50%;
+
+  font-size:1.2rem;
+  line-height:1;
+
+  transition:
+    transform .3s ease,
+    background .3s ease,
+    border-color .3s ease;
+}
+
+.team-card:hover .team-card__icon{
+  background:var(--orange);
+  border-color:var(--orange);
+}
+
+.team-card[open] .team-card__icon{
+  transform:rotate(45deg);
+  background:var(--orange);
+  border-color:var(--orange);
+}
+
+
+/* Contenido desplegable */
+
+.team-card__content{
+  padding:25px 0 10px;
+  margin-top:20px;
+  border-top:1px solid rgba(25,25,25,.16);
+}
+
+.team-card__content p{
+  margin:0;
+  font-size:.9rem;
+  line-height:1.75;
+}
+
+.team-card__quote{
+  font-family:"Amaranth",sans-serif;
+  font-size:1.3rem !important;
+  line-height:1.3 !important;
+  margin-bottom:14px !important;
+  color:var(--orange);
+}
+
+
+/* Accesibilidad */
+
+.team-card__summary:focus-visible{
+  outline:2px solid var(--orange);
+  outline-offset:6px;
+  border-radius:18px;
+}
+
+
+
+
 @media (max-width:900px){
   .nav__toggle{display:block}
   .nav__links{
