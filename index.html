@@ -3,245 +3,529 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
   <title>Horizon 2027 · UAY Events</title>
-  <link rel="icon" type="image/svg+xml" href="assets/images/favicon-UAY-Events.svg">
+
+  <link
+    rel="icon"
+    type="image/svg+xml"
+    href="assets/images/favicon-UAY-Events.svg"
+  >
+
   <link rel="stylesheet" href="css/styles.css">
 
   <style>
+
+    /* =========================================================
+       LANDING
+    ========================================================= */
+
     .landing {
+      width: 100%;
       height: 100vh;
-      min-height: 600px;
+      height: 100svh;
+
       background: var(--alabaster);
-      display: flex;
-      align-items: center;
-      padding: 35px 0;
+
       overflow: hidden;
+
+      display: flex;
     }
+
 
     .landing__inner {
-      width: min(calc(100% - (var(--pad) * 2)), var(--max));
+      width: min(
+        calc(100% - (var(--pad) * 2)),
+        var(--max)
+      );
+
       height: 100%;
-      margin: auto;
-      display: flex;
-      flex-direction: column;
+
+      margin: 0 auto;
+
+      padding: 28px 0 24px;
+
+      display: grid;
+
+      grid-template-rows:
+        auto
+        minmax(0, 1fr)
+        auto;
     }
 
-    /* PARTE SUPERIOR */
+
+    /* =========================================================
+       CABECERA
+    ========================================================= */
 
     .landing__top {
       display: flex;
       justify-content: space-between;
-      align-items: flex-start;
+      align-items: center;
+
       gap: 30px;
     }
 
+
     .landing__brand {
-      font-family: "Amaranth", sans-serif;
-      font-size: 1.6rem;
-      font-weight: 700;
+      display: flex;
+      align-items: center;
     }
+
 
     .landing__brand img {
-       width:130px;
-       height:auto;
+      display: block;
+
+      width: 120px;
+      height: auto;
     }
+
 
     .landing__meta {
-      font-size: .75rem;
+      font-size: .68rem;
+
       text-transform: uppercase;
-      letter-spacing: .16em;
+
+      letter-spacing: .18em;
+
       font-weight: 700;
+
+      opacity: .65;
+
+      white-space: nowrap;
     }
 
-    /* CONTENIDO CENTRAL */
+
+    /* =========================================================
+       CONTENIDO
+    ========================================================= */
 
     .landing__content {
-      margin-top: auto;
-      margin-bottom: 45px;
-      max-width: 1100px;
+      display: flex;
+      flex-direction: column;
+
+      justify-content: center;
+
+      max-width: 1000px;
+
+      padding: 30px 0;
     }
+
 
     .landing__hello {
       font-family: "Amaranth", sans-serif;
-      font-size: clamp(3rem, 6vw, 6.5rem);
-      line-height: .95;
-      margin: 0 0 30px;
-      letter-spacing: -.03em;
+
+      font-size: clamp(
+        3.4rem,
+        6.5vw,
+        6.8rem
+      );
+
+      line-height: .88;
+
+      letter-spacing: -.045em;
+
+      margin: 0 0 28px;
     }
+
 
     .landing__hello span {
       color: var(--orange);
     }
 
-    .landing__intro {
-      font-size: clamp(1.05rem, 1.5vw, 1.4rem);
-      max-width: 780px;
+
+    .landing__copy {
+      max-width: 760px;
+    }
+
+
+    .landing__copy p {
       margin: 0;
-      line-height: 1.5;
+
+      font-size: clamp(
+        .98rem,
+        1.25vw,
+        1.2rem
+      );
+
+      line-height: 1.52;
     }
 
-    .landing__intro strong {
-      font-weight: 600;
+
+    .landing__copy p + p {
+      margin-top: 10px;
     }
 
-    /* PARTE INFERIOR */
+
+    /* =========================================================
+       CTA
+    ========================================================= */
 
     .landing__bottom {
+      border-top: 1px solid rgba(25, 25, 25, .18);
+
+      padding-top: 18px;
+
       display: grid;
-      grid-template-columns: 1fr auto;
+
+      grid-template-columns:
+        minmax(0, 1fr)
+        auto;
+
+      align-items: end;
+
       gap: 40px;
-      align-items: center;
-      padding-top: 24px;
-      padding-bottom: 5px;
-      border-top: 1px solid rgba(25,25,25,.18);
     }
+
 
     .landing__question {
       font-family: "Amaranth", sans-serif;
-      font-size: clamp(1.7rem, 3vw, 3.2rem);
-      line-height: 1;
+
+      font-size: clamp(
+        1.65rem,
+        2.7vw,
+        3rem
+      );
+
+      line-height: .95;
+
+      letter-spacing: -.02em;
+
       margin: 0;
-      max-width: 760px;
     }
+
 
     .landing__question span {
       color: var(--orange);
     }
 
-    /* RESPONSIVE */
+
+    .landing__bottom .btn {
+      white-space: nowrap;
+    }
+
+
+    /* =========================================================
+       PORTÁTILES CON POCA ALTURA
+    ========================================================= */
+
+    @media
+    (max-height: 760px)
+    and
+    (min-width: 801px) {
+
+      .landing__inner {
+        padding-top: 20px;
+        padding-bottom: 18px;
+      }
+
+
+      .landing__brand img {
+        width: 105px;
+      }
+
+
+      .landing__content {
+        padding: 20px 0;
+      }
+
+
+      .landing__hello {
+        font-size: clamp(
+          3rem,
+          5.5vw,
+          5.2rem
+        );
+
+        margin-bottom: 20px;
+      }
+
+
+      .landing__copy p {
+        font-size: .98rem;
+
+        line-height: 1.42;
+      }
+
+
+      .landing__bottom {
+        padding-top: 14px;
+      }
+
+
+      .landing__question {
+        font-size: clamp(
+          1.5rem,
+          2.4vw,
+          2.5rem
+        );
+      }
+
+    }
+
+
+    /* =========================================================
+       MÓVIL
+    ========================================================= */
 
     @media (max-width: 800px) {
 
       .landing {
+        min-height: 100svh;
         height: auto;
-        min-height: 100vh;
-        padding: 25px 0;
+
         overflow: visible;
       }
 
+
       .landing__inner {
-        min-height: calc(100vh - 50px);
+        min-height: 100svh;
+
+        padding:
+          22px
+          0
+          24px;
+
+        grid-template-rows:
+          auto
+          1fr
+          auto;
       }
+
 
       .landing__top {
-        flex-direction: column;
-        gap: 6px;
-      }
-
-      .landing__content {
-        margin-top: auto;
-        margin-bottom: 35px;
-        padding-top: 45px;
-      }
-
-      .landing__hello {
-        margin-bottom: 24px;
-      }
-
-      .landing__bottom {
-        grid-template-columns: 1fr;
-        gap: 22px;
         align-items: flex-start;
-        padding-top: 22px;
       }
 
-      .landing__bottom .btn {
-        width: 100%;
-      }
-    }
 
-    /* PANTALLAS DE PORTÁTIL CON POCA ALTURA */
-
-    @media (max-height: 750px) and (min-width: 801px) {
-
-      .landing {
-        padding: 25px 0;
+      .landing__brand img {
+        width: 100px;
       }
 
-      .landing__content {
-        margin-bottom: 30px;
-      }
 
-      .landing__hello {
-        font-size: clamp(3rem, 5.5vw, 5.5rem);
-        margin-bottom: 22px;
-      }
+      .landing__meta {
+        font-size: .57rem;
 
-      .landing__intro {
-        font-size: 1.05rem;
+        max-width: 150px;
+
+        white-space: normal;
+
+        text-align: right;
+
         line-height: 1.4;
       }
 
+
+      .landing__content {
+        justify-content: center;
+
+        padding: 45px 0 35px;
+      }
+
+
+      .landing__hello {
+        font-size: clamp(
+          3.1rem,
+          15vw,
+          5rem
+        );
+
+        margin-bottom: 24px;
+      }
+
+
+      .landing__copy p {
+        font-size: .98rem;
+
+        line-height: 1.5;
+      }
+
+
       .landing__bottom {
+        grid-template-columns: 1fr;
+
+        gap: 20px;
+
+        align-items: flex-start;
+
         padding-top: 20px;
       }
 
+
       .landing__question {
-        font-size: clamp(1.7rem, 2.7vw, 2.8rem);
+        font-size: clamp(
+          1.7rem,
+          8vw,
+          2.4rem
+        );
       }
+
+
+      .landing__bottom .btn {
+        width: 100%;
+
+        justify-content: center;
+      }
+
+    }
+
+
+    /* =========================================================
+       MÓVILES MUY BAJOS
+    ========================================================= */
+
+    @media
+    (max-width: 800px)
+    and
+    (max-height: 700px) {
+
+      .landing__content {
+        padding: 30px 0 25px;
+      }
+
+
+      .landing__hello {
+        font-size: 3rem;
+
+        margin-bottom: 18px;
+      }
+
+
+      .landing__copy p {
+        font-size: .9rem;
+
+        line-height: 1.42;
+      }
+
+
+      .landing__question {
+        font-size: 1.65rem;
+      }
+
     }
 
   </style>
+
 </head>
+
 
 <body>
 
+
   <main class="landing">
+
 
     <div class="landing__inner">
 
+
       <!-- CABECERA -->
 
-      <div class="landing__top">
+      <header class="landing__top">
 
-        <div class="landing__brand">
-          <img src="assets/images/Logo-UAY-Events.svg" alt="UAY Events">
-        </div>
+
+        <a
+          class="landing__brand"
+          href="home.html"
+          aria-label="UAY Events"
+        >
+
+          <img
+            src="assets/images/Logo-UAY-Events.svg"
+            alt="UAY Events"
+          >
+
+        </a>
+
 
         <div class="landing__meta">
+
           Horizon 2027 · Creative Proposal
+
         </div>
 
-      </div>
+
+      </header>
 
 
-      <!-- MENSAJE PRINCIPAL -->
 
-      <div class="landing__content">
+      <!-- CONTENIDO PRINCIPAL -->
+
+      <section class="landing__content">
+
 
         <h1 class="landing__hello">
+
           ¡Hola!<br>
+
           Somos UAY<span>.</span> Events
+
         </h1>
 
-        <p class="landing__intro">
-          Nos hace mucha ilusión darte la bienvenida a nuestra propuesta para HORIZON 2027. Hemos cuidado 
-          cada idea, cada experiencia y cada detalle para dar forma a una propuesta que no solo responda 
-          al reto, sino que consiga llevarlo un poco más allá. Porque el horizonte no marca un final, 
-          sino todo lo que todavía está por descubrir. Y nosotros ya hemos empezado a imaginar lo que viene después.​
-        </p>
 
-      </div>
+        <div class="landing__copy">
+
+
+          <p>
+
+            Nos hace mucha ilusión darte la bienvenida
+            a nuestra propuesta para HORIZON 2027.
+            Hemos cuidado cada detalle para responder al reto y
+            llevarlo un poco más allá.
+
+          </p>
+
+
+          <p>
+
+            <strong>Porque el horizonte no marca un final,
+            sino todo lo que todavía está por descubrir.
+            Y nosotros ya hemos empezado a imaginar
+            lo que viene después.</strong>
+
+          </p>
+
+
+        </div>
+
+
+      </section>
+
 
 
       <!-- CTA -->
 
-      <div class="landing__bottom">
+      <footer class="landing__bottom">
+
 
         <p class="landing__question">
+
           READY TO LOOK<br>
-          <span>BEYOND THE HORIZON?</span>
+
+          <span>
+            BEYOND THE HORIZON?
+          </span>
+
         </p>
 
-        <a class="btn btn--orange" href="home.html">
+
+        <a
+          class="btn btn--orange"
+          href="home.html"
+        >
+
           Empezamos →
+
         </a>
 
-      </div>
+
+      </footer>
+
 
     </div>
 
+
   </main>
+
 
 </body>
 </html>
