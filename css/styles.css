@@ -226,7 +226,7 @@ button{font:inherit}
   background:var(--alabaster);
   color:var(--black);
 }
-.media-placeholder--image{min-height:340px}
+.media-placeholder--image{min-height:390px}
 .media-placeholder video,
 .media-placeholder img{
   position:absolute;
